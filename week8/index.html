@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+</head>
+<body>
+    <input type="text" name="def" id="def" placeholder=""
+</body>
+
+<script>
+    const greet = 'hello world'
+    const greetRegex = /hello/
+
+    //case sensitivity
+    const regex = /HELLO/i
+
+    //global match
+    const song = 'Twinkle twinkle twinkle little star'
+    const regexGlob = /twinkle/gi
+
+    //matching more than one
+    const def = 'computer is an electronic device that stores and processes data into information'
+    const keyRegex = /electronic | device | input | data | processes | information/g
+
+    const input = document.getElementById('def')
+    const para = document.querySelector('p')
+
+    const result = () => {
+        const str = input.value
+
+        let result
+
+        str.match(keyRegex).length >= 5 ? output = 'you scored 100%' : output = 'your score is'
+
+        para.textContent = output
+    }
+
+    document.querySelector('button').addEventListener('click', result)
+
+    //class match
+    const vowelRegex =
+
+    console.log(def.match(keyRegex))
+    // console.log(greetRegex.test(greet))
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+    <style>
+        body{
+            background-color: rgb(196, 196, 196);
+        }
+
+        h1{
+            color: rgb(36, 35, 35);
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Pallindrome checker</h1>
+    <input type="text" name="pallindrome" id="pal">
+    
+    <p></p>
+</body>
+<script>
+    const input = document.querySelector('input')
+    const para = document.querySelector('p')
+
+    // const pallindrome = () => {
+    //     input.value.match(/[a-z0-9]/g).join('') == input.value.match(/[a-z0-9]/g).
+    //     reverse().join('') ? para.textContent = 'yes' :para.textContent = 'not a pallindrome'
+    // }
+
+    const Palindrome = () => {
+        const str = (input.value).toLowerCase()
+        str.match(/[a-z0-9]/g).join('') == str.match(/[a-z0-9]/g).reverse().join('') ? para.textContent = `${str} is a Palindrome`.toUpperCase() : para.textContent = `${str} is not a Palindrome`.toUpperCase()
+    }
+
+    addEventListener('input', Palindrome)
+
+    // addEventListener('input', pallindrome)
+</script>
+</html>
